@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم درويش للعقارات</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 text-slate-800 font-sans">
+
+    <div class="flex h-screen overflow-hidden">
+        
+        <!-- القائمة الجانبية (Sidebar) -->
+        <aside class="w-64 bg-slate-900 text-white hidden md:flex flex-col justify-between p-6">
+            <div>
+                <h1 class="text-2xl font-bold text-emerald-400 mb-8 flex items-center gap-2">
+                    <span>🏢</span> درويش برو
+                </h1>
+                <nav class="space-y-3">
+                    <a href="#" class="flex items-center gap-3 bg-emerald-600 text-white px-4 py-3 rounded-xl font-medium transition">📊 لوحة القيادة</a>
+                    <a href="#" class="flex items-center gap-3 text-slate-400 hover:text-white hover:bg-slate-800 px-4 py-3 rounded-xl transition">🏠 إدارة العقارات</a>
+                    <a href="#" class="flex items-center gap-3 text-slate-400 hover:text-white hover:bg-slate-800 px-4 py-3 rounded-xl transition">👥 العملاء</a>
+                    <a href="#" class="flex items-center gap-3 text-slate-400 hover:text-white hover:bg-slate-800 px-4 py-3 rounded-xl transition">⚙️ الإعدادات</a>
+                </nav>
+            </div>
+            <div class="border-t border-slate-800 pt-4 text-sm text-slate-500">
+                مرحباً بك، المهندس درويش
+            </div>
+        </aside>
+
+        <!-- محتوى الصفحة الرئيسي -->
+        <main class="flex-1 flex flex-col overflow-y-auto">
+            
+            <!-- الهيدر العلوي -->
+            <header class="bg-white shadow-sm px-8 py-4 flex justify-between items-center">
+                <h2 class="text-xl font-bold text-slate-800">نظرة عامة على النظام</h2>
+                <div class="flex items-center gap-4">
+                    <span class="bg-emerald-100 text-emerald-700 text-sm px-3 py-1 rounded-full font-medium">النظام يعمل بكفاءة</span>
+                    <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center font-bold text-slate-700">م</div>
+                </div>
+            </header>
+
+            <!-- محتوى لوحة التحكم -->
+            <div class="p-8 space-y-8">
+                
+                <!-- بطاقات الإحصائيات السريعة -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                        <p class="text-slate-500 text-sm mb-1">إجمالي العقارات المتاحة</p>
+                        <h3 class="text-3xl font-extrabold text-slate-900">124</h3>
+                        <span class="text-emerald-600 text-xs font-semibold mt-2 inline-block">↑ زيادة 12% هذا الشهر</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                        <p class="text-slate-500 text-sm mb-1">العملاء المهتمين</p>
+                        <h3 class="text-3xl font-extrabold text-slate-900">48</h3>
+                        <span class="text-emerald-600 text-xs font-semibold mt-2 inline-block">↑ 5 عملاء جدد اليوم</span>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                        <p class="text-slate-500 text-sm mb-1">العقارات المباعة / المؤجرة</p>
+                        <h3 class="text-3xl font-extrabold text-slate-900">19</h3>
+                        <span class="text-amber-600 text-xs font-semibold mt-2 inline-block">تحت الإجراء</span>
+                    </div>
+                </div>
+
+                <!-- جدول عرض العقارات -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="p-6 border-b border-slate-100 flex justify-between items-center">
+                        <h3 class="font-bold text-lg text-slate-900">آخر العقارات المضافة</h3>
+                        <button class="bg-emerald-600 text-white text-sm px-4 py-2 rounded-xl font-medium hover:bg-emerald-700 transition">+ إضافة عقار جديد</button>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-right border-collapse">
+                            <thead>
+                                <tr class="bg-slate-50 text-slate-500 text-sm border-b border-slate-200">
+                                    <th class="p-4">اسم العقار</th>
+                                    <th class="p-4">النوع</th>
+                                    <th class="p-4">السعر</th>
+                                    <th class="p-4">الحالة</th>
+                                    <th class="p-4">الإجراء</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 text-sm">
+                                <tr class="hover:bg-slate-50 transition">
+                                    <td class="p-4 font-medium text-slate-900">فيلا سكنية فاخرة</td>
+                                    <td class="p-4 text-slate-600">شراء</td>
+                                    <td class="p-4 text-slate-600">$85,000</td>
+                                    <td class="p-4"><span class="bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-lg text-xs font-medium">متاح</span></td>
+                                    <td class="p-4"><a href="#" class="text-emerald-600 hover:underline font-medium">تعديل</a></td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition">
+                                    <td class="p-4 font-medium text-slate-900">مزرعة زيتون هادئة</td>
+                                    <td class="p-4 text-slate-600">شراء / استثمار</td>
+                                    <td class="p-4 text-slate-600">$120,000</td>
+                                    <td class="p-4"><span class="bg-amber-100 text-amber-700 px-2.5 py-1 rounded-lg text-xs font-medium">قيد الحجز</span></td>
+                                    <td class="p-4"><a href="#" class="text-emerald-600 hover:underline font-medium">تعديل</a></td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition">
+                                    <td class="p-4 font-medium text-slate-900">شقة مفروشة للأزواج</td>
+                                    <td class="p-4 text-slate-600">إيجار شهري</td>
+                                    <td class="p-4 text-slate-600">$400 / شهرياً</td>
+                                    <td class="p-4"><span class="bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-lg text-xs font-medium">متاح</span></td>
+                                    <td class="p-4"><a href="#" class="text-emerald-600 hover:underline font-medium">تعديل</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
